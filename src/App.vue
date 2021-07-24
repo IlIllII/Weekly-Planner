@@ -1,16 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Week />
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// We must import our components here from components folder.
+import Week from "./components/Week.vue"
+
 
 export default {
+  // We have to label our hook in index.html
   name: 'App',
+
+  // we declare our componenets that we have imported
   components: {
-    HelloWorld
-  }
+    Week
+  },
+
+  // we can list data to be made available elsewhere
+
+
+  // created is a lifecycle method, so it will fire on some event from the app lifecycle.
+  // In this case, created fires when the page is loaded. We use it to simply populate some
+  // tasks into data.
 }
 </script>
 
@@ -20,7 +32,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #393E46;
+  margin-top: 6px;
 }
 </style>
