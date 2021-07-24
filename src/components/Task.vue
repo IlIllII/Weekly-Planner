@@ -11,16 +11,20 @@
 
 
 <script>
+// The task is a base component to be instantiated by a parent Task list.
+
 export default {
     name: "Task",
     props: {
         task: Object,  // task objects have an id, title, and status properties
     },
     methods: {
+        // On toggle we change the class and subsequently the style to strikethrough.
         onToggle() {
             this.task.complete = !this.task.complete;
         },
     },
+    // On pressing the red x we emit an event to the task list to delete the task.
     emits: ["delete-task"],
 }
 </script>

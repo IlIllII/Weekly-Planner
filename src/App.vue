@@ -1,32 +1,31 @@
 <template>
-  <Week />
+  <Week /> <!-- The "Week" component houses the single page app. -->
 </template>
 
 
 <script>
-// We must import our components here from components folder.
+// We must import any components we want to use.
 import Week from "./components/Week.vue"
 
 
 export default {
-  // We have to label our hook in index.html
+  // We have to label our hook in index.html.
   name: 'App',
 
-  // we declare our componenets that we have imported
+  // We must register any components we import if we want them to appear.
   components: {
     Week
   },
-
-  // we can list data to be made available elsewhere
-
-
-  // created is a lifecycle method, so it will fire on some event from the app lifecycle.
-  // In this case, created fires when the page is loaded. We use it to simply populate some
-  // tasks into data.
+  
+  // we can list data to be made available to the componenet with data() {}.
+  // We can also list methods we want made available in the html and we can
+  // register lifecycle hooks here.
 }
 </script>
 
+
 <style>
+/* Some simple app wide styling */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

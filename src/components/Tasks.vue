@@ -16,6 +16,18 @@
 
 
 <script>
+/*
+Tasks.vue is the component that houses the tasks for 1 day. It accepts
+a day as a prop so it knows which day it is when created and where to
+store its task data. It catches emissions from its child component
+and houses data that is controlled by its parent component.
+
+It is parent to the Task and Day components. The Tasks are dynamically
+created and deleted by buttons and the Day is passed in and displayed
+at the top of each list.
+*/
+
+
 import Task from "./Task.vue"
 import Day from "./Day.vue"
 
@@ -31,6 +43,9 @@ export default {
 
     methods: {
         deleteTask(id) {
+            // this.day is an object that is accessible from both the Tasks
+            // and Week components by way of the prop passed in from the
+            // parent component.
             this.day.tasks = this.day.tasks.filter((task) => task.id != id)
         },
         addTask() {
@@ -38,6 +53,7 @@ export default {
                 alert("Please add a task")
                 return
             }
+            // Creates a new task by assigning a random id to it.
             const newTask = {
                 id: Math.floor(Math.random() * 100000),
                 title: this.text,
@@ -54,13 +70,6 @@ export default {
             text: "",
         }
     },
-
-    // created() {
-    //     this.tasks = [
-    //         // Task objects go here
-    //     ]
-    // },
-    
 }
 </script>
 

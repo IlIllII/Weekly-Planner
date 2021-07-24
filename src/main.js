@@ -1,6 +1,6 @@
-// main.js loads in our app and mounts it into the div in index.html
-// in the public folder with the id of "app"
-
+// main.js loads our app and mounts it into the div in index.html,
+// which is in the public folder. The div is loaded into the element
+// with the id of "app".
 import { createApp } from 'vue'
 import App from './App.vue'
 

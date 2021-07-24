@@ -1,5 +1,8 @@
 # todo-list
 
+## About
+The purpose of this project is to learn Vue.
+
 ## Project setup
 ```
 npm install
