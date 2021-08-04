@@ -1,7 +1,7 @@
 # todo-list
 
 ## About
-The purpose of this project is to learn Vue.
+This is a weekly planner app that I built as an introduction to view. If you want to see the [finished product](https://my-weekly-planner.netlify.app/) you can, otherwise you can also clone and run the project yourself:
 
 ## Project setup
 ```
